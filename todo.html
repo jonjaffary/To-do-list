@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="todo.css">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do</title>
+</head>
+
+<body>
+    <div class="navbar">
+        <h3>TO-DO</h3>
+        <span class="line">Make your task in order!!!</span>
+    </div>
+    <div class="body">
+        <button class="addListButton" onclick="addItem()">+ Add An Item</button>
+        <ul id="item-list">
+        </ul>
+    </div>
+
+    <div id="dialog">
+        <div class="dialog-header">
+            <span class="dialog-heading">Add Item</span>
+        </div>
+        <form id="addForm">
+            <label for="description">Description</label><br>
+            <textarea id="description" name="description" required></textarea><br>
+            <div class="time">
+                <span>Start</span>
+                <input type="time" id="startTime" required>
+                <span>End</span>
+                <input type="time" id="endTime">
+            </div>
+            <span class="typeText" required>Type</span><br>
+            <div class="flex">
+                <input type="radio" id="Study" name="taskType" value="Study" required>
+                <label for="Study">Study</label><br>
+                <input type="radio" id="Chores" name="taskType" value="Chores" required>
+                <label for="Chores">Chores</label><br>
+                <input type="radio" id="Shopping" name="taskType" value="Shopping" required>
+                <label for="Shopping">Shopping</label>
+            </div>
+            <div class="footer">
+                <button type="button" id="cancel">Cancel</button>
+                <button type="submit" id="submit">Add</button>
+            </div>
+        </form>
+
+    </div>
+</body>
+
+<script src="todo.js"></script>
+
+</html>
