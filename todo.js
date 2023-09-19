@@ -3,8 +3,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebas
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-analytics.js";
 
 const firebaseConfig = {
-    // firebase configuration here
-
+    // firebase configuration here //
 };
 
 const app = initializeApp(firebaseConfig);
@@ -26,7 +25,6 @@ let taskTypeInputs = document.getElementsByName('taskType');
 
 let list = [];
 let editMode = false;
-let editIndex = null;
 let selectedKey = ''
 document.addEventListener('submit', handleSubmit);
 document.getElementById('cancel').addEventListener('click', handleCancel);
@@ -44,6 +42,8 @@ function handleSubmit(event) {
             alert('Data Updated successfully')
             generateList();
             _getExistingRecord();
+            editMode = false;
+            selectedKey = ''
         }).catch(err => {
             alert(err)
         })
